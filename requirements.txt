@@ -1,0 +1,7 @@
+python-dotenv
+qdrant_client
+sentence-transformers
+numpy
+fastembed
+bs4
+colorama

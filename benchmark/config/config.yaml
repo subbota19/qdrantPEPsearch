@@ -1,0 +1,69 @@
+configs:
+  - name: "low mode"
+    dense_limit: 20
+    sparse_limit: 20
+    rff_limit: 10
+
+  - name: "hybrid_default, small rff"
+    dense_limit: 100
+    sparse_limit: 100
+    rff_limit: 20
+
+  - name: "hybrid_default, medium rff"
+    dense_limit: 100
+    sparse_limit: 100
+    rff_limit: 30
+
+  - name: "hybrid_default, height rff"
+    dense_limit: 100
+    sparse_limit: 100
+    rff_limit: 80
+
+  - name: "hybrid_aggressive"
+    dense_limit: 300
+    sparse_limit: 300
+    rff_limit: 50
+
+  - name: "ultra_aggressive"
+    dense_limit: 500
+    sparse_limit: 500
+    rff_limit: 50
+
+tests:
+  - query: "what is the syntax for declaring coroutine"
+    expected:
+      - "https://peps.python.org/pep-0492/#new-coroutine-declaration-syntax"
+  - query: "give me an example of asynchronous iterable object"
+    expected:
+      - "https://peps.python.org/pep-0492/#asynchronous-iterators-and-async-for"
+  - query: "how to declare async function"
+    expected:
+      - "https://peps.python.org/pep-0492/#glossary"
+  - query: "what is the difference definition between await and yield from"
+    expected:
+      - "https://peps.python.org/pep-0492/#pep-3152"
+      - "https://peps.python.org/pep-0492/#updated-operator-precedence-table"
+      - "https://peps.python.org/pep-0492/#await-expression"
+  - query: "how does it request and manage memory from the operating system"
+    expected:
+      - "https://peps.python.org/pep-0445/#memory-allocators"
+  - query: "how does it allocate memory for objects of different sizes"
+    expected:
+      - "https://peps.python.org/pep-0445/#memory-allocators"
+      - "https://peps.python.org/pep-0445/#new-functions-and-structures"
+  - query: "what changes were made to function annotations in Python 3.11"
+    expected:
+      - "https://peps.python.org/pep-0649/#overview"
+  - query: "how does Python ensure thread safety when removing the GIL"
+    expected:
+      - "https://peps.python.org/pep-0703/#removing-the-gil"
+  - query: "how does Python ensure thread safety when removing the GIL"
+    expected:
+      - "https://peps.python.org/pep-0703/#removing-the-gil"
+  - query: "what behavior could cause an immortal object to become mortal"
+    expected:
+      - "https://peps.python.org/pep-0683/#accidental-de-immortalizing"
+      - "https://peps.python.org/pep-0683/#accidental-immortality"
+  - query: "how does python implement true multi-core parallelism"
+    expected:
+      - "https://peps.python.org/pep-0703/#multiprocessing"
